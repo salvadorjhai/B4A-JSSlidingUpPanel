@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>com.salvadorjhai.widgets.JSSlidingUpPanel</name>
+        <shortname>JSSlidingUpPanel</shortname>
+        <comment>This library provides a simple way to add a draggable sliding up panel (popularized by Google Music and Google Maps) to your Android application. Brought to you by Umano. 
+ Wrapped: https://github.com/umano/AndroidSlidingUpPanel
+ Known Issue: Using Anchor in designer will hide main and slideup views. use SetLayout via code instead of anchor
+ Sample:</comment>
+        <objectwrapper>com.sothree.slidinguppanel.SlidingUpPanelLayout</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setCoveredFadeColor</name>
+            <comment>Sets the covered fade color.
+color: the color
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setPanelState</name>
+            <comment>Sets the panel state.
+panelState: the panel state
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>panelState</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAnchorPoint</name>
+            <comment>Sets the anchor point.
+anchorPoint: the anchor point
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>anchorPoint</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setMainView</name>
+            <comment>Sets the main view.
+view: the view
+Width: the width
+Height: the height
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Build</name>
+            <comment>Builds the.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setSlideUpView</name>
+            <comment>Sets the slide up view.
+view: the view
+Width: the width
+Height: the height
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>setDragView</name>
+            <comment>Sets the drag view.
+dragView: the drag view
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>dragView</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setShadowHeight</name>
+            <comment>Sets the shadow height.
+val: the val
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>val</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setGravity</name>
+            <comment>Sets the gravity.
+gravity: the gravity
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setOverlayed</name>
+            <comment>Sets the overlayed.
+overlayed: the overlayed
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>overlayed</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setScrollableView</name>
+            <comment>Sets the scrollable view.
+scrollableView: the scrollable view
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>scrollableView</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTouchEnabled</name>
+            <comment>Sets the touch enabled.
+enabled: the enabled
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isClipPanel</name>
+            <comment>Checks if is clip panel.
+Return type: @return:true, if is clip panel</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>setMinFlingVelocity</name>
+            <comment>Sets the min fling velocity.
+val: the val
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>val</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setPanelHeight</name>
+            <comment>Sets the panel height.
+val: the val
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>val</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setParallaxOffset</name>
+            <comment>Sets the parallax offset.
+val: the val
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>val</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setClipPanel</name>
+            <comment>Sets the clip panel.
+clip: the clip
+Return type: @return:the JS sliding up panel</comment>
+            <returntype>com.salvadorjhai.widgets.JSSlidingUpPanel</returntype>
+            <parameter>
+                <name>clip</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isOverlayed</name>
+            <comment>Checks if is overlayed.
+Return type: @return:true, if is overlayed</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>paramPanelWrapper</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>paramLabelWrapper</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>paramMap</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isTouchEnabled</name>
+            <comment>Checks if is touch enabled.
+Return type: @return:true, if is touch enabled</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CoveredFadeColor</name>
+            <returntype>int</returntype>
+            <comment>Gets the covered fade color.</comment>
+        </property>
+        <property>
+            <name>PanelState</name>
+            <returntype>int</returntype>
+            <comment>Gets the panel state.</comment>
+        </property>
+        <property>
+            <name>MinFlingVelocity</name>
+            <returntype>int</returntype>
+            <comment>Gets the min fling velocity.</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ShadowHeight</name>
+            <returntype>int</returntype>
+            <comment>Gets the shadow height.</comment>
+        </property>
+        <property>
+            <name>CurrentParallaxOffset</name>
+            <returntype>int</returntype>
+            <comment>Gets the current parallax offset.</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PanelHeight</name>
+            <returntype>int</returntype>
+            <comment>Gets the panel height.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AnchorPoint</name>
+            <returntype>float</returntype>
+            <comment>Gets the anchor point.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>PANEL_STATE_COLLAPSED</name>
+            <comment>The collapsed.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>PANEL_STATE_ANCHORED</name>
+            <comment>The anchored.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>PANEL_STATE_EXPANDED</name>
+            <comment>The expanded.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>PANEL_STATE_DRAGGING</name>
+            <comment>The dragging.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>PANEL_STATE_HIDDEN</name>
+            <comment>The hidden.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.salvadorjhai.widgets.JSSlidingUpPanel.PanelState</name>
+        <shortname>JSPanelState</shortname>
+        <comment>The Class PanelState.</comment>
+        <owner>process</owner>
+    </class>
+    <version>0.3</version>
+    <author>salvadorjhai</author>
+    <dependsOn>JSSlidingUpPanel.aar</dependsOn>
+    <dependsOn>android-support-v4</dependsOn>
+</root>

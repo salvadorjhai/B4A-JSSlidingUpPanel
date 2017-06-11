@@ -1,0 +1,125 @@
+﻿Version=7
+NumberOfModules=1
+Module1=Starter
+Build1=Default,b4a.example
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=4
+File1=ep_naturalblack.png
+File2=main.bal
+File3=mock_data.json
+File4=sliding.bal
+NumberOfLibraries=3
+Library1=core
+Library2=jsslidinguppanel
+Library3=json
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+	Dim mockData As List
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+	Private slider As JSSlidingUpPanel
+	Private ListView1 As ListView
+
+	Private btnClose As Button
+	Private imvPattern As ImageView
+	Private lbCaption As Label
+	Private lblContent As Label
+	Private lblTitle As Label
+	Private pnlToolbar As Panel
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	'Activity.LoadLayout("Layout1")
+	
+	' add slider to your activity
+	slider.Initialize("")
+	Activity.AddView(slider, 0dip, 0dip, 100%x, 100%y)
+	
+	' load main layout (designer or via code)
+	Dim mainView As Panel
+	mainView.Initialize("")
+	mainView.LoadLayout("main")
+	ListView1.SetLayout(0dip, 0dip, 100%x, 100%y)	
+	
+	' load data in listview
+	Dim parser As JSONParser
+	parser.Initialize(File.ReadString(File.DirAssets, "mock_data.json"))
+	mockData = parser.NextArray	
+	For i = 0 To mockData.Size - 1
+		Dim map As Map = mockData.Get(i)
+		ListView1.AddTwoLinesAndBitmap2(map.Get("fullname"), map.Get("slogan"), Null, i)
+	Next
+	
+	' create slide panel (designer or via code)
+	Dim slideView As Panel
+	slideView.Initialize("")
+	slideView.Color = Colors.Cyan
+	slideView.LoadLayout("sliding")
+	
+	' set layout content
+	imvPattern.Bitmap = LoadBitmap(File.DirAssets, "ep_naturalblack.png")
+	imvPattern.Gravity = Gravity.FILL
+	imvPattern.Width = 100%x	
+	pnlToolbar.SetLayout(0dip, 0dip, 100%x, 50dip)
+	btnClose.SetLayout(100%x - 50dip, 0dip, 50dip, 50dip)
+	lblTitle.SetLayout(0dip, 0dip, 100%x, 50dip)
+	lbCaption.Width = 100%x
+	lblContent.Width = 100%x
+	
+	' set mainview and slideview, then build the slide panel
+	slider.setMainView(mainView, Activity.Width, Activity.Height) _
+		.setSlideUpView(slideView, 100%x, imvPattern.top + imvPattern.Height).Build
+	
+	' our layout is designed for bottom view, set initial height to 0
+	slider.setGravity(Gravity.BOTTOM) _
+		.setPanelHeight(0dip)
+	
+	' limit dragrabble view (optional)
+	'slider.setDragView(btnClose)
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub ListView1_ItemClick (Position As Int, Value As Object)
+	If slider.PanelState = slider.PANEL_STATE_EXPANDED Then
+		slider.setPanelState(slider.PANEL_STATE_COLLAPSED)
+	Else
+		' bind data to view before showing it
+		Dim map As Map = mockData.Get(Position)
+		lbCaption.Text = map.Get("fullname")
+		lblContent.Text = map.Get("slogan")
+		slider.setPanelState(slider.PANEL_STATE_EXPANDED)
+	End If
+End Sub
+
+Sub btnClose_Click
+	slider.setPanelState(slider.PANEL_STATE_COLLAPSED)
+End Sub
